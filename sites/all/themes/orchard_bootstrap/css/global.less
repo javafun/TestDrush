@@ -1,0 +1,291 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+@import "mixins.less";
+@import "set.less";
+
+/*----------------------------------------------------------------------------------------------------------
+############################################# FURNITURE
+----------------------------------------------------------------------------------------------------------*/
+
+/*# MAIN NAVIGATION #*/
+.main-menu {
+	background:#fff;
+	border:1px #eee solid;
+	list-style:none;
+	margin:0 0 20px;
+
+	&:after {
+		clear:both;
+		content:".";
+		display:block;
+		height:0;
+		visibility:hidden;
+	}
+
+	.ie7 & {
+		min-height:1px;
+	}
+
+	li,
+	li a {
+		float:left;
+		position:relative;
+	}
+
+	li {
+		border:solid #eee;
+		border-width:0 1px 0 0;
+		margin:0;
+		padding:0;
+	}
+
+	a {
+		display:block;
+		line-height:3;
+		padding:0 20px;
+		text-decoration:none;
+	}
+
+	a:hover,
+	li.active a {
+		background-color:#eee;
+		color:#333;
+	}
+
+	ul {
+		border-width:1px;
+		float:left;
+		left:-9999px;
+		position:absolute;
+		top:42px;
+		width:180px;
+		z-index:900;
+		zoom:1;
+
+		li {
+			border-width:0 0 1px;
+			display:block;
+			float:none;
+
+			a {
+				white-space:nowrap;
+			}
+
+		}
+
+	}
+
+	li.hover > ul {
+		left:0;
+	}
+
+	li.hover a {
+		float:none;
+	}
+
+	ul ul {
+		float:left;
+		left:-9999px;
+		overflow:hidden;
+		position:absolute;
+		top:40px;
+		z-index:900;
+		zoom:1;
+	}
+
+	ul li.hover > ul {
+		left:180px;
+		top:0;
+	}
+}
+
+/*# LOGGED IN USER MENU #*/
+.block-user-menu {
+
+	ul {
+
+	}
+
+	li {
+
+	}
+}
+
+/*----------------------------------------------------------------------------------------------------------
+############################################# FORMS
+----------------------------------------------------------------------------------------------------------*/
+button, input, select, textarea {
+	font-size:100%;
+	margin:0;
+	vertical-align:middle;
+}
+button,
+input {
+    *overflow:visible;
+    line-height:normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border:0;
+    padding:0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance:button;
+    cursor:pointer;
+    height:auto;
+    width:auto;
+}
+input[type="search"]{
+    -moz-box-sizing:content-box;
+    -webkit-appearance:textfield;
+    -webkit-box-sizing:content-box;
+    box-sizing:content-box;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button
+    {
+        -webkit-appearance:none;
+    }
+}
+textarea {
+    overflow:auto;
+    vertical-align:top;
+}
+input[type=checkbox],
+input[type=radio] {
+    border:none;
+    cursor:pointer;
+    height:auto;
+    line-height:normal;
+    margin:3px 10px 3px 0;
+    *margin-top:0;
+    padding:0;
+    width:auto;
+}
+input,
+textarea,
+select {
+    border:1px solid #ccc;
+    .border-radius(3px);
+    color:#808080;
+    display:inline-block;
+    padding:4px;
+    width:210px;
+}
+select{
+    padding:initial;
+}
+input[type=file] {
+    background-color:#fff;
+    border:initial;
+    .box-shadow(none);
+    line-height:initial;
+    padding:initial;
+}
+select,
+input[type=file]{
+    *height:auto;
+    line-height:27px;
+    *margin-top:4px;
+}
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly]{
+    background-color:#f5f5f5;
+    border-color:#ddd;
+    cursor:not-allowed;
+}
+input[type=button],
+input[type=reset],
+input[type=submit]{
+    background:none;
+    height:auto;
+    width:auto;
+}
+select,input[type=file]{
+    height:auto;
+    line-height:27px;
+    margin-top:4px;
+}
+select[multiple]{
+    background-color:#fff;
+    height:inherit;
+}
+textarea{
+    height:auto;
+}
+input:focus,
+textarea:focus{
+    -moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.1), 0 0 8px rgba(82,168,236,0.6);
+    -webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.1), 0 0 8px rgba(82,168,236,0.6);
+    box-shadow:inset 0 1px 3px rgba(0,0,0,0.1), 0 0 8px rgba(82,168,236,0.6);
+    border-color:rgba(82,168,236,0.8);
+    outline:0;
+}
+input[type=file]:focus,
+input[type=checkbox]:focus,
+select:focus{
+    .box-shadow(none);
+    outline:1px dotted #666;
+}
+fieldset {
+	border:0;
+    margin-bottom:20px;
+    width:100%;
+
+	ol {
+        list-style:none;
+        margin:0;
+    }
+
+	li {
+        margin-bottom:10px;
+    }
+
+	label {
+		display:block;
+
+		&.inline-label {
+            display:inline;
+            float:none;
+            vertical-align:middle;
+            width:auto;
+        }
+
+	}
+
+	legend {
+        color:#404040;
+        display:block;
+        font-size:19.5px;
+        line-height:1;
+        padding-left:150px;
+
+		.ie6 &,
+		.ie7 & {
+            line-height:1.5;
+            padding:0 0 5px 145px;
+        }
+
+	}
+
+	&.small {
+        width:105px;
+    }
+
+	&.medium {
+        width:210px;
+    }
+
+	&.large {
+        width:447px;
+    }
+
+}
+

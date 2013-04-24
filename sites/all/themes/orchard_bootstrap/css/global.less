@@ -3,6 +3,45 @@
 @import "mixins.less";
 @import "set.less";
 
+body {
+	background: url(../images/background.jpg) 0 0 fixed repeat #fff;
+}
+
+.page-content-wrapper {
+	position: relative;
+}
+
+#heston {
+	height:100%;
+	position: absolute;
+	right:950px;
+	top:0;
+	width:770px;
+
+	&:after {
+		background: url(../images/heston.jpg) right top no-repeat transparent;
+		content: " ";
+		height:200%;
+		left:auto;
+		position: fixed;
+		top:0;
+		width:770px;
+	}
+
+}
+
+
+/*-------------------------
+######### ADMIN MENU
+--------------------------*/
+
+
+#admin-menu {
+	-webkit-box-shadow: 0 none;
+			box-shadow: 0 none;
+}
+
+
 /*----------------------------------------------------------------------------------------------------------
 ############################################# FURNITURE
 ----------------------------------------------------------------------------------------------------------*/
@@ -161,7 +200,6 @@ input[type=radio] {
     height:auto;
     line-height:normal;
     margin:3px 10px 3px 0;
-    *margin-top:0;
     padding:0;
     width:auto;
 }
@@ -234,6 +272,7 @@ select:focus{
     .box-shadow(none);
     outline:1px dotted #666;
 }
+
 fieldset {
 	border:0;
     margin-bottom:20px;
@@ -289,3 +328,20 @@ fieldset {
 
 }
 
+
+
+
+
+.region-content {
+
+	background: #fff;
+
+	.region-content-inner {
+		padding:10px 30px;
+	}
+
+	h1 {
+		color:#561e2e
+	}
+
+}

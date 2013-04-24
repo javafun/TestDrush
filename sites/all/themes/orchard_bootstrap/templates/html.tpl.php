@@ -18,7 +18,10 @@
 		<a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
 	</div>
 	<?php print $page_top; ?>
-	<?php print $page; ?>
+	<div class="page-content-wrapper container-12">
+		<div id="heston"></div>
+		<?php print $page; ?>
+	</div>
 	<?php print $page_bottom; ?>
 </body>
 </html>

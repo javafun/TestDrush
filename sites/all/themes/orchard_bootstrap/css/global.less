@@ -1,7 +1,11 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+@import "variables.less";
 @import "mixins.less";
 @import "set.less";
+
+// @TODO DELETE THIS
+.post-image img { width:100%; height:360px; }
 
 body {
 	background: url(../images/background.jpg) 0 0 fixed repeat #fff;
@@ -347,33 +351,115 @@ fieldset {
 		}
 	}
 
-	.article-list {
-		.article {
 
-			position: relative;
+	.article {
 
-			.date {
-				color:#fff;
-				width:60px;
-				height:60px;
-				background: #4d2942;
-				display: block;
+		border-bottom:1px solid #ccc;
+		margin:0 0 30px -30px;
+		padding:0 30px;
+		position: relative;
+		width:100%;
+
+		h2, .author {
+			padding-left:40px;
+		}
+
+		p:last-of-type {
+			float:left;
+		}
+
+		.author, .comment-count, .permalink {
+			.font-size(12);
+			padding-right:15px;
+		}
+
+		.category {
+			background: rgba(0,0,0,0.75);
+			color:#fff;
+			font-family:@serif;
+			.font-size(14);
+			margin-top:20px;
+			padding:3px 5px;
+			position: absolute;
+		}
+
+		.post-image {
+			margin:20px 0;
+		}
+
+		.date {
+			color:#fff;
+			background: #4d2942;
+			display: block;
+			height:60px;
+			left:-10px;
+			position: absolute;
+			top:0;
+			width:60px;
+
+			&:after {
+				background: url(../images/sprite.png) -180px 0 no-repeat transparent;
+				content:" ";
+				height:7px;
+				left:0;
 				position: absolute;
-				left:-40px;
-				top:0;
+				top:100%;
+				width:10px;
+			}
+		}
 
-				&:after {
-					content:" ";
-					position: absolute;
-					left:0;
-					top:100%;
-					width:10px;
-					height:7px;
-					background: url(../images/sprite.png) -180px 0 no-repeat transparent;
-				}
+		.views-more-link {
+			display: inline-block;
+			float: left;
+		}
+
+		.tags {
+
+			clear:both;
+			font-weight: bold;
+			margin:15px 0;
+
+			.item-list, ol, li {
+				display: inline-block;
 			}
 
+			ol {
+				margin:0;
+
+				li {
+					background: #ccc;
+					display: inline;
+					font-weight: normal;
+					margin: 0 5px;
+					padding:3px 5px;
+
+					a {
+						color:#000;
+						text-decoration: none;
+					}
+				}
+			}
 		}
+
+		.recipe-pdf a{
+			background: #4d2942;
+			color:#fff;
+			display: block;
+			font-family: @serif;
+			.font-size(20);
+			margin:0 0 15px;
+			padding: 15px;
+			text-decoration: none;
+			text-align: center;
+		}
+
+		// for articles inside a listing only.
+		.article-list & {
+
+		}
+
+
 	}
+
 
 }

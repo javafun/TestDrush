@@ -1,5 +1,5 @@
-name = 'Orchard Bootstrap'
-description = 'Orchard drupal theme for all projects.'
+name = 'Breville - Sage'
+description = 'Theme for Breville\'s Sage Club - by Orchard.'
 core = '7.x'
 engine = 'phptemplate'
 screenshot = 'screenshot.png'

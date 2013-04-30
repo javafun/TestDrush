@@ -33,6 +33,7 @@ body {
 
 }
 
+// Make sure there is no space between regions
 .region {
 	min-height:0;
 }
@@ -53,7 +54,7 @@ body {
 --------------------------*/
 
 .logo-img {
-	margin:30px 0 0 0;
+	margin:40px 0 10px 0;
 }
 
 /*----------------------------------------------------------------------------------------------------------
@@ -65,6 +66,7 @@ body {
 	background:#fff;
 	list-style:none;
 	margin:0;
+	border-bottom:1px solid #e5e5e5;
 	padding:35px 30px 30px;
 
 	&:after {
@@ -94,10 +96,15 @@ body {
 
 	a {
 		background: #542746;
+		color:#fff;
+		font-family: @serif;
 		display:block;
-		line-height:3;
-		padding:0 20px;
+		line-height:1;
+		padding:70px 5px 0;
 		text-decoration:none;
+		text-align: center;
+		width:90px;
+		height:30px;
 	}
 
 	a:hover,
@@ -151,6 +158,18 @@ body {
 		left:180px;
 		top:0;
 	}
+
+
+	// Specific To our Menu
+
+	a.home, a.home.active {
+
+		background:url(../images/logo.png) center left no-repeat #fff;
+		width:326px;
+		padding-top:100px;
+		overflow: hidden;
+		height: 0;
+	}
 }
 
 /*# LOGGED IN USER MENU #*/
@@ -170,10 +189,11 @@ body {
 ------------------------------------------*/
 
 #zone-header-wrapper {
-	width:100%;
-	height:44px;
 	background: #542746;
+	color:#fff;
+	height:44px;
 	position: relative;
+	width:100%;
 	z-index: 100;
 }
 

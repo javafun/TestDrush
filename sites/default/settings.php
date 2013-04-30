@@ -210,7 +210,7 @@
  *   );
  * @endcode
  */
-$databases = array();
+//$databases = array();
 
 /**
  * Access control for update.php script.
@@ -551,3 +551,14 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
+
+///////////////////////////////////////////////////////////////////////
+
+
+// On Acquia Cloud, this include file configures Drupal to use the correct
+// database in each site environment (Dev, Stage, or Prod). To use this 
+// settings.php for development on your local workstation, set $db_url
+// (Drupal 5 or 6) or $databases (Drupal 7) as described in comments above.
+if (file_exists('/var/www/site-php')) {
+  require('/var/www/site-php/kevinmiller2/kevinmiller2-settings.inc');
+}

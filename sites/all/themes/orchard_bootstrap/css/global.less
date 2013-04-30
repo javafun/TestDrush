@@ -5,20 +5,19 @@
 @import "set.less";
 
 // @TODO DELETE THIS
-.post-image img { width:100%; height:360px; }
+.post-image { max-height: 500px; overflow: hidden;}
+.post-image img { width:100%; }
 
 body {
 	background: url(../images/background.jpg) 0 0 fixed repeat #fff;
 }
 
-.page-content-wrapper {
-	position: relative;
-}
-
+// A <div id="heston" /> has to be added via a block
+// currently in the header_first region
 #heston {
 	height:100%;
 	position: absolute;
-	right:950px;
+	right:700px;
 	top:0;
 	width:770px;
 
@@ -427,14 +426,15 @@ fieldset {
 				margin:0;
 
 				li {
-					background: #ccc;
 					display: inline;
 					font-weight: normal;
 					margin: 0 5px;
-					padding:3px 5px;
 
 					a {
+						background: #ccc;
 						color:#000;
+						display: inline-block;
+						padding:3px 5px;
 						text-decoration: none;
 					}
 				}

@@ -1,0 +1,7 @@
+name = Heston Image
+core = 7.x
+package = Features
+php = 5.2.4
+dependencies[] = fe_block
+features[fe_block_boxes][] = heston_image
+features[features_api][] = api:1

@@ -17,7 +17,7 @@ body {
 #heston {
 	height:100%;
 	position: absolute;
-	right:700px;
+	right:822px;
 	top:0;
 	width:770px;
 
@@ -33,6 +33,9 @@ body {
 
 }
 
+.region {
+	min-height:0;
+}
 
 /*-------------------------
 ######### ADMIN MENU
@@ -45,6 +48,14 @@ body {
 }
 
 
+/*-------------------------
+######### BRANDING
+--------------------------*/
+
+.logo-img {
+	margin:30px 0 0 0;
+}
+
 /*----------------------------------------------------------------------------------------------------------
 ############################################# FURNITURE
 ----------------------------------------------------------------------------------------------------------*/
@@ -52,9 +63,9 @@ body {
 /*# MAIN NAVIGATION #*/
 .main-menu {
 	background:#fff;
-	border:1px #eee solid;
 	list-style:none;
-	margin:0 0 20px;
+	margin:0;
+	padding:35px 30px 30px;
 
 	&:after {
 		clear:both;
@@ -82,6 +93,7 @@ body {
 	}
 
 	a {
+		background: #542746;
 		display:block;
 		line-height:3;
 		padding:0 20px;
@@ -90,7 +102,7 @@ body {
 
 	a:hover,
 	li.active a {
-		background-color:#eee;
+		background-color:#719e00;
 		color:#333;
 	}
 
@@ -151,6 +163,18 @@ body {
 	li {
 
 	}
+}
+
+/*------------------------------------------
+ ##################### HEADER MENU
+------------------------------------------*/
+
+#zone-header-wrapper {
+	width:100%;
+	height:44px;
+	background: #542746;
+	position: relative;
+	z-index: 100;
 }
 
 /*----------------------------------------------------------------------------------------------------------
@@ -340,7 +364,7 @@ fieldset {
 	background: #fff;
 
 	.region-content-inner {
-		padding:10px 30px;
+		padding:30px;
 	}
 
 	h2 {
